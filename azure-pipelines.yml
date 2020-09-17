@@ -9,10 +9,9 @@ steps:
   displayName: 'execute the Jmeter script'
   inputs:
     buildFile: 'build - build.xml'
-	PublishUnitResults: false
-	javaHomeOption: 'JDKVersion' # Options: jDKVersion, path
+	publishJUnitResults: false
+	javaHomeOption: 'JDKVersion'
 
-Settings
 - task: CmdLine@2
 	displayName: 'Prepare test Results'
 	inputs:
