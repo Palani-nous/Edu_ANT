@@ -1,0 +1,38 @@
+trigger:
+- none
+
+pool:
+  vmImage: 'windows-latest'
+  
+steps:
+- task: Ant@1
+  displayName: 'execute the Jmeter script'
+  inputs:
+    buildFile: 'build - build.xml'
+	PublishUnitResults: false
+	javaHomeOption: 'JDKVersion' # Options: jDKVersion, path
+
+Settings
+- task: CmdLine@2
+	displayName: 'Prepare test Results'
+	inputs:
+	script:
+		cd D:\a\1\s\results\html
+		dir
+		powershell -command "\"$(Get-Content build.xml)\"> report.html".
+		
+Settings
+- task: fileContentVariable@2
+	displayName: 'Set test results as variable'
+	inputs:
+		FilePath: 'D:\a\1\s\results\html\report.html'
+		VariableName: 'html'
+		AddNewlines: false
+		
+Settings
+- task: PublishTestResults@2
+	displayName: 'Publish test results'
+	inputs:
+		testresultsFormat: 'JUnit'
+		testresultsFiles: 'results/unit/build.xml'
+		testRunTitle: 'Edureka'
