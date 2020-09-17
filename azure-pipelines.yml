@@ -8,7 +8,7 @@ steps:
 - task: Ant@1
   displayName: 'execute the Jmeter script'
   inputs:
-    buildFile: 'build - add.xml'
+    buildfile: 'build - add.xml'
 	options:
 	publishJUnitResults: false
 	javaHomeOption: 'JDKVersion'
