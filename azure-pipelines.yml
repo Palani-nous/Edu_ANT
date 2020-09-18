@@ -18,7 +18,7 @@ steps:
       dir
       powershell -command "\"$(Get-Content build.xml)\"> report.html"
 
-- task: fileContentVariable@2
+- task: FileContenttoVariable@2
   inputs:
     FilePath: 'D:\a\1\s\results\html\report.html'
     VariableName: 'html'
@@ -29,4 +29,3 @@ steps:
     testResultsFormat: 'JUnit'
     testResultsFiles: 'results/unit/build.xml'
     testRunTitle: 'Edureka'
-
