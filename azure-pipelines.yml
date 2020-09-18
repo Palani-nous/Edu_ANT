@@ -17,3 +17,17 @@ steps:
       cd D:\a\1\s\results\html
       dir
       powershell -command "\"$(Get-Content build.xml)\"> report.html"
+
+- task: fileContentVariable@2
+  inputs:
+    FilePath: 'D:\a\1\s\results\html\report.html'
+    VariableName: 'html'
+    AddNewlines: false
+		
+Settings
+- task: PublishTestResults@2
+	displayName: 'Publish test results'
+	inputs:
+		testresultsFormat: 'JUnit'
+		testresultsFiles: 'results/unit/build.xml'
+		testRunTitle: 'Edureka'
