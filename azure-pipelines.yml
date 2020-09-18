@@ -23,11 +23,10 @@ steps:
     FilePath: 'D:\a\1\s\results\html\report.html'
     VariableName: 'html'
     AddNewlines: false
-		
-Settings
+
 - task: PublishTestResults@2
-	displayName: 'Publish test results'
-	inputs:
-		testresultsFormat: 'JUnit'
-		testresultsFiles: 'results/unit/build.xml'
-		testRunTitle: 'Edureka'
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: 'results/unit/build.xml'
+    testRunTitle: 'Edureka'
+
