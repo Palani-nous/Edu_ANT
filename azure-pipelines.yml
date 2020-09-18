@@ -16,4 +16,4 @@ steps:
     script:
       cd D:\a\1\s\results\html
 	  dir
-      powershell -command "\"$(Get-Content build.xml)\"> report.html".
+	  powershell -command "\"$(Get-Content build.xml)\"> report.html"
