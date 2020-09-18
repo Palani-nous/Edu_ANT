@@ -13,7 +13,6 @@ steps:
     javaHomeOption: 'JDKVersion'
 
 - task: CmdLine@2
-	displayName: 'Prepare test Results'
 	inputs:
 	script:
 		cd D:\a\1\s\results\html
