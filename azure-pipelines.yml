@@ -13,12 +13,12 @@ steps:
     javaHomeOption: 'JDKVersion'
 
 - task: CmdLine@2
-	inputs:
-	script:
-		cd D:\a\1\s\results\html
+  inputs:
+    script: |
+      cd D:\a\1\s\results\html
 		dir
-		powershell -command "\"$(Get-Content build.xml)\"> report.html".
-
+		powershell -command "\"$(Get-Content build.xml)\"> report.html"
+	  
 - task: fileContentVariable@2
 	displayName: 'Set test results as variable'
 	inputs:
