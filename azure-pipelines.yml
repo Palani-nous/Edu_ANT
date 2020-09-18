@@ -19,8 +19,7 @@ steps:
 		cd D:\a\1\s\results\html
 		dir
 		powershell -command "\"$(Get-Content build.xml)\"> report.html".
-		
-Settings
+
 - task: fileContentVariable@2
 	displayName: 'Set test results as variable'
 	inputs:
