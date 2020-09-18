@@ -68,7 +68,7 @@
 
     <!-- Allow jar to be picked up locally -->
     <path id="jmeter.classpath">
-        <fileset dir="${basedir}">
+        <fileset dir="D:\a\1\s">
           <include name="ant-jmeter*.jar"/>
         </fileset>
     </path>
