@@ -6,7 +6,6 @@ pool:
   
 steps:
 - task: Ant@1
-	displayName: 'execute the Jmeter script'
   inputs:
     buildFile: 'build - build.xml'
     options: 
