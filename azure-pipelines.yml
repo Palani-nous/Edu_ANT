@@ -4,11 +4,11 @@ trigger:
 pool:
   vmImage: 'windows-latest'
   
+steps:
 - task: JMeterInstaller@0
   inputs:
     jmeterVersion: '5.2'
 
-steps:
 - task: Ant@1
   inputs:
     buildFile: 'build.xml'
