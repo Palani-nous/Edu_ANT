@@ -7,7 +7,7 @@ pool:
 steps:
 - task: Ant@1
   inputs:
-    buildFile: 'build - build.xml'
+    buildFile: 'build.xml'
     options: 
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
